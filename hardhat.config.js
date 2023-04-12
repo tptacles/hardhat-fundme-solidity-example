@@ -20,13 +20,20 @@ module.exports = {
   },
   defaultNetwork: "hardhat",
   networks: {
+    hardhat: {
+      chainId: 31337,
+    },
     goerli: {
       url: process.env.GOERLI_RPC_URL,
       accounts: [process.env.PRIVATE_KEY],
       chainId: 5,
     },
     localhost: {
-      url: "http://127.0.0.1:8545/",
+      url: "http://10.0.0.229:8545/",
+      chainId: 1337,
+    },
+    hardhat_node: {
+      url: "http://127.0.0.1:8545",
       chainId: 31337,
     },
   },
